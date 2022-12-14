@@ -1,3 +1,10 @@
-<p>
-day4-ng-if works!
-</p>
+<!-- Dấu * ở trước ngIf thể hiện đây là Structural Directive -->
+<div *ngIf="age > 18; else under18">Tuổi lớn hơn 18</div>
+
+<!-- ng-template có thể hiểu đơn  giản là 1 thẻ bao bọc, #under18 là id của thẻ ng-template -->
+<ng-template #under18>Tuổi nhỏ hơn 18</ng-template>
+
+<br />
+<button (click)="decreaseAge()">-</button>
+Age: {{ age }}
+<button (click)="increaseAge()">+</button>
