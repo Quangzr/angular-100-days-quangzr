@@ -1,0 +1,8 @@
+.danger-color {
+  color: red;
+}
+
+.warning-color {
+  /* color: yellow; */
+  font-size: larger;
+}

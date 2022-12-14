@@ -1,3 +1,38 @@
-<p>
-day6-class-style-binding works!
+<button (click)="changeDanger()">Danger</button>
+<button (click)="changeWarning()">Warning</button>
+
+<!-- 
+  [class.ten-class]
+  [class]="[array]"
+  [class]="object" có dạng [class]="{key: value}"
+  [class]="variable"
+ -->
+<div [class.danger-color]="isDanger" [class.warning-color]="isWarning">ALO</div>
+
+<div [class]="['danger-color', 'warning-color']">BLO</div>
+
+<div [class]="{ 'danger-color': isDanger, 'warning-color': isWarning }">
+  CLO
+</div>
+
+<div [class]="classTest">DLO</div>
+
+<!-- 
+  [style.tenStyle]
+  [style.ten-style]
+  [style]="variable"
+  [style.tenStyle.unit] (VD: style.fontSize.rem) (thêm đơn vị ở cuối)
+  [style]="object"
+  [style.css-variable]
+ -->
+<!--  -->
+<p
+  [style.color]="'red'"
+  [style.backgroundColor]="'blue'"
+  [style]="styleTest"
+  [style.fontSize.px]="20"
+  [style]="{ width: '200px', borderColor: 'green' }"
+  [style.color]="'var(--text-color)'"
+>
+  Start edit
 </p>
