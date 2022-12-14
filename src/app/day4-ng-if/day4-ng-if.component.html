@@ -1,5 +1,13 @@
 <!-- Dấu * ở trước ngIf thể hiện đây là Structural Directive -->
-<div *ngIf="age > 18; else under18">Tuổi lớn hơn 18</div>
+<div *ngIf="age >= 18; else under18">Tuổi lớn hơn 18</div>
+
+<!-- [hidden] dùng để ẩn khi ko thỏa mãn điều kiện (sẽ gắn display:none vào khi ko thỏa mãn điều kiện)-->
+<div [hidden]="age < 18">Tuổi lớn hơn 18</div>
+
+<!-- Sự khác nhau giữa *ngIf và [hidden]:
+*ngIf sẽ init và destroy component khi thay điều kiện từ if -> else hoặc else -> if
+[hidden] chỉ gắn display: none vào, ko destroy và init component mới
+-->
 
 <!-- ng-template có thể hiểu đơn  giản là 1 thẻ bao bọc, #under18 là id của thẻ ng-template -->
 <ng-template #under18>Tuổi nhỏ hơn 18</ng-template>
