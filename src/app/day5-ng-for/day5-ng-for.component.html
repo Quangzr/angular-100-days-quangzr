@@ -1,0 +1,34 @@
+<!-- 
+  for(let user of users) {
+
+  }
+
+  - $implicit: item Implicit Context Variable (trong trường hợp dưới thì item Implicit Context Variable chính là user)
+  - index: số thứ tự của item hiện tại
+  - count: độ dài của array
+  - first: true nếu như item đó là item đầu tiên trong array
+  - last: true nếu như item đó là item cuối cùng
+  - even: true nếu như item đó là item vị trí chẵn
+  - odd: true nếu như item đó là item vị trí lẻ
+ -->
+
+<ul>
+  <li
+    *ngFor="
+      let user of users;
+      index as index;
+      count as total;
+      first as isFirst;
+      last as isLast;
+      even as isEven;
+      odd as isOdd
+    "
+  >
+    <span>
+      {{ user.name }} - {{ user.username }} - {{ user.phone }} in {{ index }} of
+      {{ total }}
+    </span>
+    <br />
+    <span> I am {{ isEven ? 'even' : 'odd' }} </span>
+  </li>
+</ul>

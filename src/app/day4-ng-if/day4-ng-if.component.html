@@ -1,3 +1,5 @@
+<!-- Structural directives: Là directive cấu trúc, dùng để vẽ html, hiển thị data lên giao diện html, và thay đổi cấu trúc DOM bằng việc thêm bớt các phần tử trong DOM. Các structural directive thường có dấu '*' ở trước của directive. Ví dụ *ngFor, *ngIf -->
+
 <!-- Dấu * ở trước ngIf thể hiện đây là Structural Directive -->
 <div *ngIf="age >= 18; else under18">Tuổi lớn hơn 18</div>
 
@@ -5,7 +7,7 @@
 <div [hidden]="age < 18">Tuổi lớn hơn 18</div>
 
 <!-- Sự khác nhau giữa *ngIf và [hidden]:
-*ngIf sẽ init và destroy component khi thay điều kiện từ if -> else hoặc else -> if
+*ngIf sẽ init và destroy component khi thay điều kiện từ if -> else hoặc else -> if (nếu *ngIf dùng với component)
 [hidden] chỉ gắn display: none vào, ko destroy và init component mới
 -->
 
