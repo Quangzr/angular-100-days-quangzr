@@ -7,6 +7,8 @@ import { Day3DataEventBindingComponent } from './day3-data-event-binding/day3-da
 import { Day4NgIfComponent } from './day4-ng-if/day4-ng-if.component';
 import { Day5NgForComponent } from './day5-ng-for/day5-ng-for.component';
 import { Day6ClassStyleBindingComponent } from './day6-class-style-binding/day6-class-style-binding.component';
+import { Day7InputBindingComponent } from './day7-input-binding/day7-input-binding.component';
+import { ProgressBarComponent } from './day7-input-binding/progress-bar/progress-bar.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -17,6 +19,8 @@ import { Day6ClassStyleBindingComponent } from './day6-class-style-binding/day6-
     Day4NgIfComponent,
     Day5NgForComponent,
     Day6ClassStyleBindingComponent,
+    Day7InputBindingComponent,
+    ProgressBarComponent,
   ],
   bootstrap: [AppComponent],
 })
