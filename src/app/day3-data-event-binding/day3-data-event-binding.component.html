@@ -1,0 +1,16 @@
+<!-- {{ expression }} -->
+<p>{{ name }}</p>
+<p>{{ user }}</p>
+<p>{{ user.name }}</p>
+<p>{{ user.age }}</p>
+
+<!-- DATA BINDING -->
+<input [type]="inputType" [value]="user.name" />
+
+<!-- EVENT BINDING -->
+<button type="button" (click)="handleClick()">Click</button>
+
+<br />
+<!-- 2 WAY BINDING -->
+<!-- Để dùng 2 WAY BINDING thì cần thêm FormsModule trong phần import của @NgModule -->
+<input type="text" [(ngModel)]="name" />
