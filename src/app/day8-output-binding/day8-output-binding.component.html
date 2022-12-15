@@ -1,5 +1,7 @@
-<ul>
-  <li *ngFor="let author of authors">{{ author.name }}</li>
-</ul>
+<app-author-detail
+  *ngFor="let author of authors"
+  [author]="author"
+  (selectedAuthor)="changeSelectedAuthor($event)"
+></app-author-detail>
 
-<app-author-detail></app-author-detail>
+<p>Selected author: {{ selectedAuthor.name }}</p>

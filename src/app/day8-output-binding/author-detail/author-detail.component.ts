@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Author } from '../authors';
 
 @Component({
   selector: 'app-author-detail',
@@ -10,5 +11,6 @@ export class AuthorDetailComponent implements OnInit {
 
   ngOnInit() {}
 
-  @Input() author;
+  @Input() author: Author;
+  @Output() selectedAuthor = new EventEmitter<Author>();
 }
