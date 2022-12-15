@@ -24,7 +24,7 @@ export class Day8OutputBindingComponent implements OnInit {
       return author.id !== deleteAuthorParam.id;
     });
 
-    if (this.selectedAuthor.id == deleteAuthorParam.id) {
+    if (this.selectedAuthor.id === deleteAuthorParam.id) {
       this.selectedAuthor = this.authors[0];
     }
   }
