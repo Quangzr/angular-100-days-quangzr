@@ -11,4 +11,18 @@ export class Day7InputBindingComponent implements OnInit {
   ngOnInit() {}
 
   backgroudColorBar = 'pink';
+
+  progressBar = 30;
+
+  increaseProgress() {
+    if (this.progressBar < 100) {
+      this.progressBar = this.progressBar + 5;
+    }
+  }
+
+  decreaseProgress() {
+    if (this.progressBar > 0) {
+      this.progressBar = this.progressBar - 5;
+    }
+  }
 }

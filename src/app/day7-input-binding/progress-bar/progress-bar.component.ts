@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-progress-bar',
@@ -26,12 +32,32 @@ import { Component, OnInit, Input } from '@angular/core';
   `,
   ],
 })
-export class ProgressBarComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-
+export class ProgressBarComponent implements OnInit, OnChanges {
   @Input() progress = 50;
   @Input() backgroundColor = '#ccc';
   @Input() progressColor = 'tomato';
+
+  constructor() {
+    console.log('constructor', {
+      progress: this.progress,
+      backgroundColor: this.backgroundColor,
+      progressColor: this.progressColor,
+    });
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit', {
+      progress: this.progress,
+      backgroundColor: this.backgroundColor,
+      progressColor: this.progressColor,
+    });
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges', {
+      progress: this.progress,
+      backgroundColor: this.backgroundColor,
+      progressColor: this.progressColor,
+    });
+  }
 }

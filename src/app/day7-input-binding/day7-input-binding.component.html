@@ -8,4 +8,10 @@
 ></app-progress-bar>
 
 <br />
-<app-progress-bar [backgroundColor]="backgroudColorBar"></app-progress-bar>
+<app-progress-bar
+  [backgroundColor]="backgroudColorBar"
+  [progress]="progressBar"
+></app-progress-bar>
+
+<button (click)="increaseProgress()">Increase Progress</button>
+<button (click)="decreaseProgress()">Decrease Progress</button>
