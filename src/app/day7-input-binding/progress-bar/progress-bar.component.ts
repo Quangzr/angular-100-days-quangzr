@@ -32,6 +32,12 @@ import {
   `,
   ],
 })
+
+// constructor sẽ chạy mỗi khi component được gọi
+// ngOnInit sẽ chạy mỗi khi component được gọi và nhận đủ các input truyền vào
+// ngOnChanges sẽ chạy mỗi khi component thay đổi
+// Flow chạy nếu component có input: constructor -> ngOnChanges -> ngOnInit
+// Flow chạy nếu component ko có input: constructor -> ngOnInit
 export class ProgressBarComponent implements OnInit, OnChanges {
   @Input() progress = 50;
   @Input() backgroundColor = '#ccc';
