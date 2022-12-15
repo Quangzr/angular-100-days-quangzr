@@ -2,6 +2,7 @@
   *ngFor="let author of authors"
   [author]="author"
   (selectedAuthor)="changeSelectedAuthor($event)"
+  (deleteAuthor)="deleteAuthorInArray($event)"
 ></app-author-detail>
 
 <p>Selected author: {{ selectedAuthor.name }}</p>

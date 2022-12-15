@@ -1,1 +1,3 @@
-<p (click)="selectedAuthor.emit(author)">{{ author?.name }}</p>
+<span (click)="selectedAuthor.emit(author)">{{ author?.name }}</span>
+<button (click)="deleteAuthor.emit(author)">Delete</button>
+<br />

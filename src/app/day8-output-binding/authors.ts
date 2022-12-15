@@ -5,7 +5,7 @@ export interface Author {
   email: string;
 }
 
-export const authors = [
+export const authorsData = [
   {
     id: 1,
     name: 'Leanne Graham',
