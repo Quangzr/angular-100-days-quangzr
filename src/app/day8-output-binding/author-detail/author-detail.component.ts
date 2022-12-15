@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-author-detail',
   templateUrl: './author-detail.component.html',
-  styleUrls: ['./author-detail.component.css']
+  styleUrls: ['./author-detail.component.css'],
 })
 export class AuthorDetailComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
+  @Input() author;
 }
