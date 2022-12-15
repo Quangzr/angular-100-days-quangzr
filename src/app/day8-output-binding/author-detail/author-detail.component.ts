@@ -13,5 +13,5 @@ export class AuthorDetailComponent implements OnInit {
 
   @Input() author: Author;
   @Output() selectedAuthor = new EventEmitter<Author>();
-  @Output() deleteAuthor = new EventEmitter<Author>();
+  @Output() deleteAuthor = new EventEmitter<number>();
 }

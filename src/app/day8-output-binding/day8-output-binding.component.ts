@@ -19,12 +19,12 @@ export class Day8OutputBindingComponent implements OnInit {
     this.selectedAuthor = selectedAuthorParam;
   }
 
-  deleteAuthorInArray(deleteAuthorParam: Author) {
+  deleteAuthorInArray(deleteAuthorParamId: number) {
     this.authors = this.authors.filter((author) => {
-      return author.id !== deleteAuthorParam.id;
+      return author.id !== deleteAuthorParamId;
     });
 
-    if (this.selectedAuthor.id === deleteAuthorParam.id) {
+    if (this.selectedAuthor.id === deleteAuthorParamId) {
       this.selectedAuthor = this.authors[0];
     }
   }
