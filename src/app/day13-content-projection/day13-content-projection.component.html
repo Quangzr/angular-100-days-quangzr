@@ -1,3 +1,15 @@
 <p>day13-content-projection works!</p>
 
 <app-toggle-day13></app-toggle-day13>
+
+<app-toggle-day13 [(checked)]="questions.question1">
+  <h3 class="toogle-header">Header 1</h3>
+  <label ngProjectAs="app-label">Question 1</label>
+  <span>Some paragraph</span>
+</app-toggle-day13>
+
+<app-toggle-day13 [(checked)]="questions.question2">
+  <h3 class="toogle-header">Header 2</h3>
+  <span>Some paragraph 2</span>
+  <label>Question 2</label>
+</app-toggle-day13>
