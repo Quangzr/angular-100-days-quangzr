@@ -1,1 +1,4 @@
-<app-toggle-day10 [(checked)]="isChecked"></app-toggle-day10>
+<!-- toggleComp là instance của app-toggle-day10 Component -->
+<app-toggle-day10 #toggleComp [(checked)]="isChecked"></app-toggle-day10>
+
+<button (click)="toggleComp.toggle()">Toggle me</button>
