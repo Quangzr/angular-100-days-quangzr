@@ -11,7 +11,7 @@ export class ToggleDay10Component implements OnInit {
   ngOnInit() {}
 
   @Input() checked: boolean;
-  @Output() checkedChange = new EventEmitter();
+  @Output() checkedChange = new EventEmitter<boolean>();
 
   toggle() {
     this.checkedChange.emit(!this.checked);
