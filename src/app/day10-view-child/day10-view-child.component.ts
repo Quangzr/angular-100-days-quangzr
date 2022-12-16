@@ -1,4 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+} from '@angular/core';
 import { ToggleDay10Component } from './toggle-day10/toggle-day10.component';
 
 @Component({
@@ -7,12 +13,16 @@ import { ToggleDay10Component } from './toggle-day10/toggle-day10.component';
   styleUrls: ['./day10-view-child.component.css'],
 })
 export class Day10ViewChildComponent implements OnInit {
-  //Tên trong ngoặc phải giống với tên # ở bên html
+  //Sử dụng ViewChild hoặc ViewChildren thì có ngAfterViewInit
+  //Tên trong ngoặc '' phải giống với tên # ở bên html
   @ViewChild('toggleComp', { static: true }) toggleComp: ToggleDay10Component;
+  //Nếu muốn tương tác với nhiều child thì có thể dùng children với kiểu dữ liệu QueryList
+  //Nếu có 1 child nào đó trong list children ở trong Structural Directive thì sẽ ko sử dụng đc ở ngOnInit nhưng vẫn sử dụng đươc ở ngAfterViewInit
+  @ViewChildren('toggleComp') toggleComps: QueryList<ToggleDay10Component>;
   constructor() {}
 
   //Trong ngOnInit sẽ thấy this.toggleComp undefined vì view chưa render kịp
-  // nếu muốn trong ngOnInit nhận ra thì phải static: true trong ViewChild (nhưng this.toggleComp phải ko ở trong directive)
+  //Nếu muốn trong ngOnInit nhận ra thì phải static: true trong ViewChild (nhưng this.toggleComp phải ko ở trong Structural Directive)
   ngOnInit() {
     console.log('onInit', this.toggleComp);
   }
@@ -21,5 +31,7 @@ export class Day10ViewChildComponent implements OnInit {
 
   ngAfterViewInit() {
     console.log(this.toggleComp);
+    //Dùng trong trường hợp Children
+    //this.toggleComps.changes.subscribe(console.log);
   }
 }
