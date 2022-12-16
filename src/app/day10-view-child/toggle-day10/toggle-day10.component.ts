@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-day10',
@@ -11,7 +11,7 @@ export class ToggleDay10Component implements OnInit {
   ngOnInit() {}
 
   @Input() checked: boolean;
-  @Output() checkedChange = new EventEmi();
+  @Output() checkedChange = new EventEmitter();
 
   toggle() {
     this.checkedChange.emit(!this.checked);
