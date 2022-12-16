@@ -17,6 +17,7 @@ import { Day10ViewChildComponent } from './day10-view-child/day10-view-child.com
 import { ToggleDay10Component } from './day10-view-child/toggle-day10/toggle-day10.component';
 import { Day11TypescriptDataTypeComponent } from './day11-typescript-data-type/day11-typescript-data-type.component';
 import { Day12TypescriptAdvancedTypeComponent } from './day12-typescript-advanced-type/day12-typescript-advanced-type.component';
+import { Day13ContentProjectionComponent } from './day13-content-projection/day13-content-projection.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -37,6 +38,7 @@ import { Day12TypescriptAdvancedTypeComponent } from './day12-typescript-advance
     ToggleDay10Component,
     Day11TypescriptDataTypeComponent,
     Day12TypescriptAdvancedTypeComponent,
+    Day13ContentProjectionComponent,
   ],
   bootstrap: [AppComponent],
 })
