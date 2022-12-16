@@ -12,6 +12,7 @@ import { ProgressBarComponent } from './day7-input-binding/progress-bar/progress
 import { Day8OutputBindingComponent } from './day8-output-binding/day8-output-binding.component';
 import { AuthorDetailComponent } from './day8-output-binding/author-detail/author-detail.component';
 import { Day9Custom2WayBindingComponent } from './day9-custom-2-way-binding/day9-custom-2-way-binding.component';
+import { ToggleComponentComponent } from './day9-custom-2-way-binding/toggle-component/toggle-component.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -27,6 +28,7 @@ import { Day9Custom2WayBindingComponent } from './day9-custom-2-way-binding/day9
     Day8OutputBindingComponent,
     AuthorDetailComponent,
     Day9Custom2WayBindingComponent,
+    ToggleComponentComponent,
   ],
   bootstrap: [AppComponent],
 })
